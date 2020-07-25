@@ -1,0 +1,69 @@
+{
+    "response_code": 0,
+    "results": [
+        {
+            "type": "radio",
+            "difficulty": "easy",
+            "question": "What is Pikachu&#039;s National Pok&eacute;Dex Number?",
+            "correct_answer": "#025",
+            "options": [
+                "#001",
+                "#031",
+                "#109",
+                "#025"
+            ]
+        },
+        {
+            "category": "Entertainment: Video Games",
+            "type": "radio",
+            "difficulty": "easy",
+            "question": "In &quot;Mario &amp; Sonic at the Olympic Games&quot;, characters are split into how many types?",
+            "correct_answer": "4",
+            "options": [
+                "6",
+                "5",
+                "4",
+                "3"
+            ]
+        },
+        {
+            "category": "Entertainment: Video Games",
+            "type": "radio",
+            "difficulty": "easy",
+            "question": "In which mall does &quot;Dead Rising&quot; take place?",
+            "correct_answer": "Willamette Parkview Mall",
+            "options": [
+                "Liberty Mall",
+                "Willamette Parkview Mall",
+                "Twin Pines Mall",
+                "Central Square Shopping Center"
+            ]
+        },
+        {
+            "category": "Entertainment: Video Games",
+            "type": "radio",
+            "difficulty": "easy",
+            "question": "In CoD: Black Ops III, what is the name of the rogue A.I. antagonist?",
+            "correct_answer": "Corvus",
+            "options": [
+                "Corvus",
+                "Cabal",
+                "Legion",
+                "Icarus"
+            ]
+        },
+        {
+            "category": "Entertainment: Video Games",
+            "type": "radio",
+            "difficulty": "easy",
+            "question": "In Counter-Strike: Global Offensive, what&#039;s the rarity of discontinued skins called?",
+            "correct_answer": "Contraband",
+            "options": [
+                "Discontinued",
+                "Diminshed",
+                "Limited",
+                "Contraband"
+            ]
+        }
+    ]
+}
