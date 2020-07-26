@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/facelab-quiz-assignment/static/css/main.f59bfe53.chunk.css",
+    "main.js": "/facelab-quiz-assignment/static/js/main.354bbd16.chunk.js",
+    "main.js.map": "/facelab-quiz-assignment/static/js/main.354bbd16.chunk.js.map",
+    "runtime-main.js": "/facelab-quiz-assignment/static/js/runtime-main.e8d435b8.js",
+    "runtime-main.js.map": "/facelab-quiz-assignment/static/js/runtime-main.e8d435b8.js.map",
+    "static/js/2.ff4f37a4.chunk.js": "/facelab-quiz-assignment/static/js/2.ff4f37a4.chunk.js",
+    "static/js/2.ff4f37a4.chunk.js.map": "/facelab-quiz-assignment/static/js/2.ff4f37a4.chunk.js.map",
+    "index.html": "/facelab-quiz-assignment/index.html",
+    "precache-manifest.489d2ee69cfb0ffc2a41fd86d0c31049.js": "/facelab-quiz-assignment/precache-manifest.489d2ee69cfb0ffc2a41fd86d0c31049.js",
+    "service-worker.js": "/facelab-quiz-assignment/service-worker.js",
+    "static/css/main.f59bfe53.chunk.css.map": "/facelab-quiz-assignment/static/css/main.f59bfe53.chunk.css.map",
+    "static/js/2.ff4f37a4.chunk.js.LICENSE.txt": "/facelab-quiz-assignment/static/js/2.ff4f37a4.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.e8d435b8.js",
+    "static/js/2.ff4f37a4.chunk.js",
+    "static/css/main.f59bfe53.chunk.css",
+    "static/js/main.354bbd16.chunk.js"
+  ]
+}
