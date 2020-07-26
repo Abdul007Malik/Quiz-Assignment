@@ -14,7 +14,17 @@
     background-color: #fffffff7;
 }
 
-.questions .item{
+.questions .item {
     background-color: #fff;
-    margin-bottom:13px;
+    margin-bottom: 13px;
+}
+
+.blink {
+    animation: blinker 1s linear infinite
+}
+
+@keyframes blinker {
+    50% {
+        opacity: 0;
+    }
 }

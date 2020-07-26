@@ -2,6 +2,7 @@ import * as actionTypes from './actionTypes';
 import axios from 'axios';
 import { completeStage } from './stage';
 import { STAGES } from '../../constants';
+import shuffle from 'lodash.shuffle';
 
 export const fetchQuestionsSuccess = (questions) => {
     return {
@@ -30,7 +31,11 @@ export const fetchQuestions = () => {
         dispatch({ type: actionTypes.QUESTIONS_FETCH_START });
         axios.get('http://localhost:8000/questions')
             .then(res => {
-                const fetchedQuestions = res.data.results.map((question, index) => ({ ...question, id: index + 1 }))
+                const fetchedQuestions = res.data.results.map((question, index) => ({
+                    ...question,
+                    options: shuffle(question?.options),
+                    id: index + 1
+                }))
                 dispatch(fetchQuestionsSuccess(fetchedQuestions));
             })
             .catch(err => {

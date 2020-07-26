@@ -1,6 +1,6 @@
 import * as actionTypes from '../actions/actionTypes';
 
-const initialState = { questions: [], loading: false, current: 1 };
+const initialState = { questions: [], loading: false, duration: 60, current: 1 };
 
 const question = (state = initialState, action) => {
     switch (action.type) {

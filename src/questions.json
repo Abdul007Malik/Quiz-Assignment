@@ -2,22 +2,45 @@
     "response_code": 0,
     "results": [
         {
-            "type": "radio",
-            "difficulty": "easy",
-            "question": "What is Pikachu&#039;s National Pok&eacute;Dex Number?",
-            "correct_answer": "#025",
-            "options": [
-                "#001",
-                "#031",
-                "#109",
-                "#025"
-            ]
+            "type": "fill_in_blank",
+            "question": "What is Pikachu's National PokeDex Number?",
+            "correct_answer": "#025"
         },
         {
-            "category": "Entertainment: Video Games",
             "type": "radio",
-            "difficulty": "easy",
-            "question": "In &quot;Mario &amp; Sonic at the Olympic Games&quot;, characters are split into how many types?",
+            "questionType": "video",
+            "question": "Watch this movie clip and type the name of the movie?",
+            "correct_answer": "Intern",
+            "options": [
+                "Intern",
+                "Internship",
+                "Notebook",
+                "P.S. I Love you"
+            ],
+            "videoPath": "https://drive.google.com/uc?export=download&id=1nf30vMlaqm78NbhjF7Ya_GTaZ5DKK3lr"
+        },
+        {
+            "type": "radio",
+            "questionType": "image",
+            "question": "Is the logo of car Bentley?",
+            "correct_answer": "true",
+            "options": [
+                "true",
+                "false"
+            ],
+            "imagePath": "https://i.pinimg.com/236x/c3/fa/2c/c3fa2c9df80fc450dec2cad096142c00--bike-logo-royal-logo.jpg"
+        },
+        {
+            "type": "fill_in_blank",
+            "questionType": "image",
+            "question": "What is the name of this fruit?",
+            "correct_answer": "strawberry",
+            "imagePath": "https://4.imimg.com/data4/XA/VY/MY-23661864/fresh-strawberry-500x500.jpg"
+        },
+        
+        {
+            "type": "radio",
+            "question": "In Mario & Sonic at the Olympic Games', characters are split into how many types?",
             "correct_answer": "4",
             "options": [
                 "6",
@@ -27,10 +50,8 @@
             ]
         },
         {
-            "category": "Entertainment: Video Games",
             "type": "radio",
-            "difficulty": "easy",
-            "question": "In which mall does &quot;Dead Rising&quot; take place?",
+            "question": "In which mall does \"Dead Rising\" take place?",
             "correct_answer": "Willamette Parkview Mall",
             "options": [
                 "Liberty Mall",
@@ -40,9 +61,7 @@
             ]
         },
         {
-            "category": "Entertainment: Video Games",
             "type": "radio",
-            "difficulty": "easy",
             "question": "In CoD: Black Ops III, what is the name of the rogue A.I. antagonist?",
             "correct_answer": "Corvus",
             "options": [
@@ -50,19 +69,6 @@
                 "Cabal",
                 "Legion",
                 "Icarus"
-            ]
-        },
-        {
-            "category": "Entertainment: Video Games",
-            "type": "radio",
-            "difficulty": "easy",
-            "question": "In Counter-Strike: Global Offensive, what&#039;s the rarity of discontinued skins called?",
-            "correct_answer": "Contraband",
-            "options": [
-                "Discontinued",
-                "Diminshed",
-                "Limited",
-                "Contraband"
             ]
         }
     ]

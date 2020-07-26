@@ -18,15 +18,13 @@ const axiosMock = new MockAdapter(axios, { delayResponse: 500 });
 const questionsData = require('./questions.json');
 // console.log(questionsData)
 
-
-axiosMock.onPut('http://localhost:8000/questions').reply(204)
-
 axiosMock.onGet('http://localhost:8000/questions').reply(200, questionsData);
 
 axiosMock.onPost('http://localhost:8000/register').reply(200, {
   id: 1,
   name: ''
 })
+axiosMock.onAny().passThrough();
 
 
 

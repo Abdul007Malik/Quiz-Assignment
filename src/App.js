@@ -19,9 +19,6 @@ import PrivateRoute from './hoc/PrivateRoute';
 
 class QuizApp extends React.Component {
 
-  componentDidMount() {
-  }
-
   componentDidUpdate(prev) {
     if (prev.currentStage !== this.props.currentStage) {
       if (this.props.currentStage === STAGES.USER_REG)
@@ -34,6 +31,7 @@ class QuizApp extends React.Component {
         this.props.history.push('/error');
     }
   }
+  
 
   getPageTile(stage) {
     switch (stage) {
@@ -49,7 +47,6 @@ class QuizApp extends React.Component {
   render() {
     return (
       <div className="App" >
-        {/* <h1>{this.getPageTile(this.props.currentStage)}</h1> */}
         <Route exact path={`/`} component={UserForm} />
         <PrivateRoute path={`/question`} component={Questions} />
         <PrivateRoute path={`/report`} component={Report} />
