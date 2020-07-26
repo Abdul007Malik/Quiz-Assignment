@@ -14,7 +14,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
  
 ## Available Scripts
 
-[View Demo]: (https://abdul007malik.github.io/quiz-assignment/)
+[View Demo](https://abdul007malik.github.io/Quiz-Assignment/)
 
 ### `yarn start`
 
