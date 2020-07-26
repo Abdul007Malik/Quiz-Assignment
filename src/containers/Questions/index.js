@@ -7,13 +7,14 @@ import { addScore } from '../../store/actions/report';
 // import question from '../../store/reducers/question';
 // import Spinner from '../../components/UI/Spinner/Spinner';
 import PropTypes from 'prop-types'
-class Questions extends Component {
+import { Container, ProgressBar, Spinner } from 'react-bootstrap';
+class QuestionContainer extends Component {
 
     static propTypes = {
         addScore: PropTypes.func.isRequired,
         current: PropTypes.number.isRequired
     }
-    
+
     componentDidMount() {
         this.props.onFetchQuestions();
     }
@@ -26,22 +27,30 @@ class Questions extends Component {
 
     // }
     parseQuestion = (question) => {
-        return {
-            ...question,
-        }
+        return question && { ...question }
     }
     onSubmit = question => answer => {
-        this.props.addScore(answer, 1);
+        console.log(answer)
+        if (answer?.answer)
+            this.props.addScore(answer, 1);
+        else if (!window.confirm("Do you want to skip this question"))
+            return;
+        else
+            this.props.addScore(null, 0);
     }
     render() {
-        // let question = <Spinner />;
-        let question = this.parseQuestion(this.props.questions.find(ques => ques.id === this.props.current));
+        const questions = this.props.questions, questionIndex = questions.findIndex(ques => ques.id === this.props.current),
+            question = this.parseQuestion(this.props.questions[questionIndex]),
+            remains = questions.length - questionIndex, completedPercent = (questionIndex) * 100 / questions.length
+        if (this.props.loading)
+            return <Spinner animation="border" variant="warning" />
         return (
-            <div className={'questions grid'}>
+            <Container className={'questions grid col-sm-8 shadow p-3 mb-5 bg-white rounded'}>
+                <ProgressBar variant="success" now={completedPercent} />
                 {question ?
-                    <Question key={question.id} {...question} onSubmit={this.onSubmit(question)} /> :
+                    <Question key={question.id} isLast={remains === 1} {...question} onSubmit={this.onSubmit(question)} /> :
                     "No question available"}
-            </div>
+            </Container>
         );
     }
 }
@@ -62,4 +71,4 @@ const mapDispatchToProps = dispatch => {
     };
 };
 
-export default connect(mapStateToProps, mapDispatchToProps)(Questions);
+export default connect(mapStateToProps, mapDispatchToProps)(QuestionContainer);

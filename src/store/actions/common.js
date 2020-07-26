@@ -6,7 +6,6 @@ import { STAGES } from "../../constants";
 export const registerUser = (userData) => (dispatch) => {
     axios.post('http://localhost:8000/register', userData)
         .then(response => {
-            console.log(response.data);
             dispatch({ type: actionTypes.USER_REGISTER, user: { ...userData } })
             dispatch(completeStage(STAGES.USER_REG));
         })

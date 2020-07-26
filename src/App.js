@@ -14,6 +14,8 @@ import { connect } from 'react-redux'
 import Questions from './containers/Questions/index'
 import UserForm from './containers/User/index'
 import { STAGES } from './constants';
+import Report from './containers/Report';
+import PrivateRoute from './hoc/PrivateRoute';
 
 class QuizApp extends React.Component {
 
@@ -33,15 +35,24 @@ class QuizApp extends React.Component {
     }
   }
 
+  getPageTile(stage) {
+    switch (stage) {
+      case 1:
+        return "Questions";
+      case 2:
+        return "Report";
+      default:
+        return "Register";
+    }
+  }
+
   render() {
     return (
       <div className="App" >
-        {/* <header className="App-header">Play Quiz</header> */}
-        <h1>{this.props.currentStage}</h1>
+        {/* <h1>{this.getPageTile(this.props.currentStage)}</h1> */}
         <Route exact path={`/`} component={UserForm} />
-        <Route path={`/question`} component={Questions} />
-        {/* 
-        <Route path={`/report`} component={Report} /> */}
+        <PrivateRoute path={`/question`} component={Questions} />
+        <PrivateRoute path={`/report`} component={Report} />
       </div>
     )
   };

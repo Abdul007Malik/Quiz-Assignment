@@ -15,6 +15,7 @@ export const nextQuestion = () => (dispatch, getStore) => {
         lastQuesIndex = question.questions.findIndex(q => q.id === current),
         questionId = question.questions[lastQuesIndex + 1]?.id
     if (lastQuesIndex !== -1) {
+        // dispatch(completeStage(STAGES.QUESTION_STAGE));
         //if lastQuesIndex is last in the questions then complete question state
         if (lastQuesIndex === question.questions.length - 1) {
             dispatch({ type: actionTypes.QUESTIONS_POINTER_SET, current: null })

@@ -16,7 +16,7 @@ const store = configureStore(persistState)
 const axiosMock = new MockAdapter(axios, { delayResponse: 500 });
 
 const questionsData = require('./questions.json');
-console.log(questionsData)
+// console.log(questionsData)
 
 
 axiosMock.onPut('http://localhost:8000/questions').reply(204)
